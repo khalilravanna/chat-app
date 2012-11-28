@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/javascripts/jquery-1.8.2.js"></script>
+	<script src="/javascripts/bootstrap.js"></script>
+	<script src="/javascripts/client.js"></script>
+</head>
+<body>
+	<div class="page-header">
+    	<h1>Chat App <small>Stefan Valentin</small></h1>
+    </div>
+    <div class="container-fluid">
+    	<div class="row-fluid">
+    		<div class="span2">
+    		<!--Sidebar content-->
+    			<ul class="nav nav-tabs nav-stacked" id="userlist">
+    				<li class="nav-header">Users Online</li>
+    			</ul>
+   			</div>
+    		<div class="span10">
+    		<!--Body content-->
+	    		<div id="currentUser"><p class="lead"><img height="50px" width="50px" src="http://i.imgur.com/NpOjx.png"></img> Chatting With: no one...</p></div>
+	    		<div id="alert"></div>
+	    		<textarea rows=3 id="sendText"></textarea></br>
+	    		<button class="btn btn-primary" type="button" name="sendButton">Send Message</button>
+	    		</br></br>
+	    		<p class="text-info">Bolded messages are <strong>yours</strong>.</p>
+	    		<div class="well well-large" id="userMessages">
+    				
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <!-- Modal -->
+	<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Chat App</h3>
+		</div>
+		<div class="modal-body">
+			<div class="input-append control-group" id="modalControl">
+				<div id="loginError"></div>
+    			<input class="span4" id="username" placeholder="Username" type="text">
+    			<button class="btn" id="loginButton" type="button">Login!</button>
+    		</div>
+		</div>
+		<div class="modal-footer">
+		</div>
+	</div>
+    <footer>
+    </footer>
+</body>
+</html>
